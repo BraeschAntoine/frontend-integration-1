@@ -5,7 +5,7 @@ html {
 }
 body {
 	min-height: 100%;
-	margin: 0;
+	margin: 2vh;
 	padding: 0;
 	background-color: hsl(233, 47%, 7%);
 	display: flex;
@@ -16,37 +16,52 @@ body {
 		font-size: 30px;
 	}
 	#box {
-		max-width: 60%;
+		max-width: 50%;
+		height: 90%;
 		background-color: hsl(244, 38%, 16%);
-		border-radius: 15px;
+		border-radius: 5px;
 		display: flex;
 		justify-content: flex-start;
-		text-align: center;
+		text-align: start;
+		align-items: center;
 	}
 
 	#content {
 		color: white;
-		font-size: 15px;
+		font-size: 14px;
 		font-family: Inter;
 		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-content: space-around;
-		gap: 30px;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		margin: 5%;
 	}
 
 	#text {
 		color: hsla(0, 0%, 100%, 0.75);
+		font-family: Lexend Deca;
+		margin-bottom: 10%;
 	}
 
 	#stats {
+		width: 70%;
 		color: hsla(0, 0%, 100%, 0.6);
 		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-around;
+		justify-content: space-between;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 80%;
+		flex-wrap: wrap;
+	}
+
+	.stat {
+		display: flex;
+		flex-flow: column;
+		align-self: flex-end;
 	}
 
 	.heading_stats {
+		font-weight: 700;
+		font-size: 20px;
 		color: white;
 	}
 
@@ -56,15 +71,54 @@ body {
 
 	#image {
 		background-color: rgba(128, 0, 128, 0.438);
-		border-radius: 0 15px 15px 0;
+		border-radius: 0 5px 5px 0;
 		display: flex;
 		align-items: flex-end;
+		min-width: 50%;
+		min-height: 100%;
 		img {
 			border-radius: inherit;
 			filter: opacity(0.4);
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		/* Rédigez vos propriétés CSS ici */
+		#box {
+			flex-direction: column;
+			justify-content: center;
+			max-width: 90%;
+			max-height: 90%;
+			h1 {
+				text-align: center;
+			}
+		}
+
+		#content {
+			display: flex;
+			align-content: space-between;
+		}
+
+		#stats {
+			width: 100%;
+			flex-direction: column;
+			align-content: space-around;
+		}
+
+		#image {
+			order: -1;
+			border-radius: 5px 5px 0 0;
+		}
+
+		#text {
+			text-align: center;
+		}
+
+		.stat {
+			align-self: initial;
 		}
 	}
 }

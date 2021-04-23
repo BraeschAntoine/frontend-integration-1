@@ -1,10 +1,11 @@
+@charset "UTF-8";
 html {
   height: 100%;
 }
 
 body {
   min-height: 100%;
-  margin: 0;
+  margin: 2vh;
   padding: 0;
   background-color: #090b1a;
   display: -webkit-box;
@@ -23,43 +24,26 @@ body h1 {
 }
 
 body #box {
-  max-width: 60%;
+  max-width: 50%;
+  height: 90%;
   background-color: #1b1938;
-  border-radius: 15px;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  text-align: center;
+  text-align: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #content {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   font-family: Inter;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  gap: 30px;
-}
-
-body #text {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-body #stats {
-  color: rgba(255, 255, 255, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,11 +51,49 @@ body #stats {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 5%;
+}
+
+body #text {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Lexend Deca;
+  margin-bottom: 10%;
+}
+
+body #stats {
+  width: 70%;
+  color: rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 body .heading_stats {
+  font-weight: 700;
+  font-size: 20px;
   color: white;
 }
 
@@ -81,13 +103,15 @@ body #purple {
 
 body #image {
   background-color: rgba(128, 0, 128, 0.438);
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 5px 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  min-width: 50%;
+  min-height: 100%;
 }
 
 body #image img {
@@ -98,5 +122,55 @@ body #image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    /* Rédigez vos propriétés CSS ici */
+  }
+  body #box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  body #box h1 {
+    text-align: center;
+  }
+  body #content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  body #stats {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+  body #image {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    border-radius: 5px 5px 0 0;
+  }
+  body #text {
+    text-align: center;
+  }
+  body .stat {
+    -ms-flex-item-align: initial;
+        -ms-grid-row-align: initial;
+        align-self: initial;
+  }
 }
 /*# sourceMappingURL=style.css.map */
