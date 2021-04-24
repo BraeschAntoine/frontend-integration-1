@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/BraeschAntoine/frontend-integration-1)
-- Live Site URL: [Add live site URL here](https://braeschantoine.github.io/frontend-integration-1/)
+- Solution URL: [here](https://github.com/BraeschAntoine/frontend-integration-1)
+- Live Site URL: [here](https://braeschantoine.github.io/frontend-integration-1/)
 
 ## My process
 
